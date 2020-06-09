@@ -2,7 +2,8 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+
   <title>我的简历</title>
   <style>
     * {
@@ -25,6 +26,12 @@
       font: 14px/1.5 "仿宋";
       color: #666;
       background: #fff;
+    }
+    @media (max-width: 500px) {
+      article{
+        width: auto;
+        height: auto;
+      }
     }
     header{
       width: 100%;
@@ -50,7 +57,7 @@
       width: 240px;
       padding-top: 60px;
       border-right: 1px solid #ddd;
-    }
+    } 
     aside >.avatar {
       position: absolute;
       width: 100%;
@@ -60,7 +67,7 @@
     @media (max-width: 500px) {
       aside >.avatar{
         top: 30px;
-        left: 260px;
+        left: 120px;
       }
     }
     aside > .avatar img {
@@ -122,14 +129,17 @@
       .contact{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
       }
       .contact > h2{
         width: 100%
       }
-      /* .contact > .item{
-        margin-right: 40px;
-      } */
+      .contact .item{
+        margin-right: 25px;
+      }
+      .contact .wechart{
+        margin-right: 47px;
+      }
     }
     .contact .item > svg {
       width: 25px;
@@ -250,7 +260,7 @@
           <svg><use xlink:href="#icon-Email"></use></svg>
           <a href=mailto:laieny_zhang47@163.com>laieny_zhang47@163.com</a>
         </div>
-        <div class="item">
+        <div class="item wechart">
           <svg><use xlink:href="#icon-wechat"></use></svg>
           <span>zsylm052</span>
         </div>
