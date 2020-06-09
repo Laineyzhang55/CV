@@ -8,6 +8,11 @@
     * {
       box-sizing: border-box;
     }
+    @media print{
+      body{
+        margin: 0;
+      }
+    }
   #svg{
     display: none;
   }
@@ -29,6 +34,7 @@
       color: #ccc;
       line-height: 1.5;
     }
+    
     header > h1{
       margin-bottom: 0;
       padding: 0;
@@ -50,6 +56,12 @@
       width: 100%;
       top: -80px;
       text-align: center;
+    }
+    @media (max-width: 500px) {
+      aside >.avatar{
+        top: 30px;
+        left: 260px;
+      }
     }
     aside > .avatar img {
       width:120px;
@@ -106,6 +118,19 @@
       display: flex;
       align-items: center;
     }
+    @media (max-width: 500px){
+      .contact{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .contact > h2{
+        width: 100%
+      }
+      /* .contact > .item{
+        margin-right: 40px;
+      } */
+    }
     .contact .item > svg {
       width: 25px;
       height: 25px;
@@ -151,11 +176,6 @@
     @media (max-width: 500px) {
       aside {
         width: 100%;
-      }
-    }
-    @media print{
-      body{
-        margin: 0;
       }
     }
   </style>
@@ -208,7 +228,7 @@
           <span><i style="width: 70%"></i></span>
         </div>
       </section>
-      <section class="contact skills-detail">
+      <section class="skills-detail">
         <h2>技能</h2>
         <div class="item">
           <ul>
