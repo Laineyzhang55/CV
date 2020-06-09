@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的简历</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  #svg{
+    display: none;
+  }
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width: 21cm;
+      min-height: 29.7cm;
+      font: 14px/1.5 "仿宋";
+      color: #666;
+      background: #fff;
+    }
+    header{
+      width: 100%;
+      padding: 20px 0 10px 0;
+      text-align: center;
+      background: #3c3c3c;
+      color: #ccc;
+      line-height: 1.5;
+    }
+    header > h1{
+      margin-bottom: 0;
+      padding: 0;
+      font-size: 24px;
+      color: #fff;
+    }
+    header > p {
+      font-size: 18px;
+      margin: 0;
+    }
+    aside{
+      position: relative;
+      width: 240px;
+      padding-top: 60px;
+      border-right: 1px solid #ddd;
+    }
+    aside >.avatar {
+      position: absolute;
+      width: 100%;
+      top: -80px;
+      text-align: center;
+    }
+    aside > .avatar img {
+      width:120px;
+      height: 140px;
+      border-radius: 50%;
+    }
+    main{
+      flex: 1;
+      min-height: calc(29.7cm - 100px);
+    }
+
+    section {
+      margin: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    section > h2 {
+      font-size: 18px;
+      color: #0d8bd7;
+    }
+    .baseIfo .item {
+      display: flex;
+    }
+    .baseIfo .item > span:first-child{
+      display: inline-block;
+      width: 100px;
+    }
+    .baseIfo .item > span:last-child{
+      flex: 1;
+    }
+    .baseIfo .item > span:last-child::before{
+      content: ':';
+      margin-right: 10px;
+    }
+    .skills .item {
+      display: flex;
+      align-items: center;
+    }
+    .skills .item > span:first-child{
+      display: inline-block;
+      width: 100px;
+    }
+    .skills .item > span:last-child{
+      flex: 1;
+      height: 4px;
+      background: #ccc;
+    }
+    .skills .item > span:last-child i{ 
+      display: block;
+      height: 4px;
+      background: #0d8bd7;
+    }
+    .contact .item{
+      display: flex;
+      align-items: center;
+    }
+    .contact .item > svg {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+
+    .contact .item > a{
+      text-decoration: none;
+      cursor: default;
+    }
+    .skills-detail ul {
+      padding-left: 20px;
+    }
+    .skills-detail li > span{
+      color: orange;
+      list-style: outside;
+    }
+
+    .title{
+      display: flex;
+      align-items: center;
+    }
+    .title > h3 {
+      margin: 0;
+      margin-right: auto;
+    }
+    .title > a {
+      margin-right: 10px;
+      color:#3c3c3c;
+    }
+    .title > a:hover{
+      color: #0d8bd0;
+    }
+
+    .experience .title> span{
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    p span{
+      color: orange
+    }
+    @media (max-width: 500px) {
+      aside {
+        width: 100%;
+      }
+    }
+    @media print{
+      body{
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <header>
+      <h1>张琳梅</h1>
+      <p>前端工程师</p>
+    </header>
+    <aside>
+      <svg id="svg"><symbol id="icon-city" viewBox="0 0 1280 1024"><path d="M1232 384H960V48c0-26.52-21.48-48-48-48H624c-26.52 0-48 21.48-48 48v144h-128V32c0-17.68-14.32-32-32-32h-32c-17.68 0-32 14.32-32 32v160h-128V32c0-17.68-14.32-32-32-32H160c-17.68 0-32 14.32-32 32v160H48c-26.52 0-48 21.48-48 48v720c0 35.34 28.66 64 64 64h1152c35.34 0 64-28.66 64-64V432c0-26.52-21.5-48-48-48zM256 808c0 13.26-10.74 24-24 24H152c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24H152c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24H152c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m256 384c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m320 192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24V152c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m320 576c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z m0-192c0 13.26-10.74 24-24 24h-80c-13.26 0-24-10.74-24-24v-80c0-13.26 10.74-24 24-24h80c13.26 0 24 10.74 24 24v80z"  ></path></symbol><symbol id="icon-phone" viewBox="0 0 1024 1024"><path d="M914.16 708.576q0 15.424-5.728 40.288t-12 39.136q-12 28.576-69.728 60.576-53.728 29.152-106.272 29.152-15.424 0-30.016-2.016t-32.864-7.136-27.136-8.288-31.712-11.712-28-10.272q-56-20-100-47.424-73.152-45.152-151.136-123.136t-123.136-151.136q-27.424-44-47.424-100-1.728-5.152-10.272-28t-11.712-31.712-8.288-27.136-7.136-32.864-2.016-30.016q0-52.576 29.152-106.272 32-57.728 60.576-69.728 14.272-6.272 39.136-12t40.288-5.728q8 0 12 1.728 10.272 3.424 30.272 43.424 6.272 10.848 17.152 30.848t20 36.288 17.728 30.56q1.728 2.272 10.016 14.272t12.288 20.288 4 16.288q0 11.424-16.288 28.576t-35.424 31.424-35.424 30.272-16.288 26.272q0 5.152 2.848 12.864t4.864 11.712 8 13.728 6.56 10.848q43.424 78.272 99.424 134.272t134.272 99.424q1.152 0.576 10.848 6.56t13.728 8 11.712 4.864 12.864 2.848q10.272 0 26.272-16.288t30.272-35.424 31.424-35.424 28.576-16.288q8 0 16.288 4t20.288 12.288 14.272 10.016q14.272 8.576 30.56 17.728t36.288 20 30.848 17.152q40 20 43.424 30.272 1.728 4 1.728 12z"  ></path></symbol><symbol id="icon-wechat" viewBox="0 0 1170 1024"><path d="M331.428571 263.428571q0-23.428571-14.285714-37.714285t-37.714286-14.285715q-24.571429 0-43.428571 14.571429T217.142857 263.428571q0 22.285714 18.857143 36.857143t43.428571 14.571429q23.428571 0 37.714286-14t14.285714-37.428572z m424.571429 289.714286q0-16-14.571429-28.571428t-37.428571-12.571429q-15.428571 0-28.285714 12.857143T662.857143 553.142857q0 16 12.857143 28.857143t28.285714 12.857143q22.857143 0 37.428571-12.571429t14.571429-29.142857z m-134.857143-289.714286q0-23.428571-14-37.714285T569.714286 211.428571q-24.571429 0-43.428572 14.571429T507.428571 263.428571q0 22.285714 18.857143 36.857143t43.428572 14.571429q23.428571 0 37.428571-14T621.142857 263.428571z m362.857143 289.714286q0-16-14.857143-28.571428t-37.142857-12.571429q-15.428571 0-28.285714 12.857143T890.857143 553.142857q0 16 12.857143 28.857143t28.285714 12.857143q22.285714 0 37.142857-12.571429t14.857143-29.142857z m-152-226.857143q-17.714286-2.285714-40-2.285714-96.571429 0-177.714286 44T486.571429 487.142857 440 651.428571q0 44.571429 13.142857 86.857143-20 1.714286-38.857143 1.714286-14.857143 0-28.571428-0.857143t-31.428572-3.714286-25.428571-4-31.142857-6-28.571429-6l-144.571428 72.571429 41.142857-124.571429Q0 551.428571 0 387.428571q0-96.571429 55.714286-177.714285t150.857143-127.714286T414.285714 35.428571q100.571429 0 190 37.714286t149.714286 104.285714T832 326.285714z m338.285714 320.571429q0 66.857143-39.142857 127.714286T1025.142857 885.142857l31.428572 103.428572-113.714286-62.285715q-85.714286 21.142857-124.571429 21.142857-96.571429 0-177.714285-40.285714T512.857143 797.714286 466.285714 646.857143t46.571429-150.857143T640.571429 386.571429t177.714285-40.285715q92 0 173.142857 40.285715t130 109.714285T1170.285714 646.857143z"  ></path></symbol><symbol id="icon-Email" viewBox="0 0 1024 1024"><path d="M877 160.6H147c-44.7 0-81.1 36.4-81.1 81.1v540.5c0 44.7 36.4 81.1 81.1 81.1h730c44.7 0 81.1-36.4 81.1-81.1V241.7c0-44.7-36.4-81.1-81.1-81.1z m1.1 581.3L680 590.4c-17.5-13.4-42.7-10.1-56.1 7.5-13.4 17.5-10.1 42.7 7.5 56.1l169.2 129.4H222.5l170.4-130.8c17.5-13.5 20.8-38.6 7.4-56.1-13.5-17.5-38.6-20.8-56.1-7.4L145.9 741.3V299.8l251.2 192.8c33.1 25.4 73.6 38.1 114.2 38.1 40.5 0 80.9-12.6 114-37.9l252.9-193.6v442.7zM200.2 240.6H823L576.6 429.2c-37.3 28.6-93.6 28.5-130.8-0.1L200.2 240.6z"  ></path></symbol></svg>
+      <div class="avatar"><img src="./photo.jpg" alt="头像"></div>
+      
+      <section class="baseIfo">
+        <h2>个人信息</h2>
+        <div class="item">
+          <span>期望工作地</span>
+          <span>杭州</span>
+        </div>
+        <div class="item">
+          <span>学历</span>
+          <span>本科</span>
+        </div>
+        <div class="item">
+          <span>出生年月</span>
+          <span>1995.4</span>
+        </div>
+      </section>
+      <section class="skills">
+        <h2>专业熟练度</h2>
+        <div class="item">
+          <span>HTML</span>
+          <span><i style="width: 100%"></i></span>
+        </div>
+        <div class="item">
+          <span>CSS</span>
+          <span><i style="width: 90%"></i></span>
+        </div>
+        <div class="item">
+          <span>JS</span>
+          <span><i style="width: 80%"></i></span>
+        </div>
+        <div class="item">
+          <span>React</span>
+          <span><i style="width: 80%"></i></span>
+        </div>
+        <div class="item">
+          <span>Node JS</span>
+          <span><i style="width: 70%"></i></span>
+        </div>
+      </section>
+      <section class="contact skills-detail">
+        <h2>技能</h2>
+        <div class="item">
+          <ul>
+            <li>熟练掌握静态页面制作技巧，能将设计稿完美还原</li>
+            <li>熟悉前后端分离技术，包括<span>AJAX</span>、<span>跨域</span>、<span>Cookie</span>、<span>Session</span>等</li>
+            <li>熟练掌握<span>React全家桶</span>，包括<span>create-react-app</span>、<span>ReactRouter</span>、<span>Mobx</span>等</li>
+            <li>熟悉<span>ES6</span>，包括let、const、Promise、async等</li>
+            <li>了解<span>webpack</span>的配置和优化</li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact">
+        <h2>联系方式</h2>
+        <div class="item">
+          <svg><use xlink:href="#icon-phone"></use></svg>
+          <a href=tel:18883168236>18883168236</a>
+        </div>
+        <div class="item">
+          <svg><use xlink:href="#icon-Email"></use></svg>
+          <a href=mailto:laieny_zhang47@163.com>laieny_zhang47@163.com</a>
+        </div>
+        <div class="item">
+          <svg><use xlink:href="#icon-wechat"></use></svg>
+          <span>zsylm052</span>
+        </div>
+        <div class="item">
+          <svg><use xlink:href="#icon-city"></use></svg>
+          <span>杭州</span>
+        </div>
+      </section>
+    </aside>
+    <main>
+      <section class="project">
+        <h2>项目经验</h2>
+        <div class="item">
+          <div class="title">
+            <h3>PiggyUI</h3>
+            <a href="#">代码私有</a>
+            <a target="_blink" href="http://laineyzhang.gitee.io/piggy-ui/src/index.html">线上预览</a>
+          </div>
+          <p>使用原生js实现的组件集合的页面，包括tab切换、tooltip提示、轮播组件、弹窗提示等功能组件。 </p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>三分钟PPT</h3>
+            <a href="#">代码私有</a>
+            <a target="_blink" href="http://laineyzhang.gitee.io/easy-ppt">线上预览</a>
+          </div>
+          <p> 使用原生<span>Javascript</span>实现一款简洁高效的在线ppt制作平台。使用该工具用户可使用markdown在数分钟完成ppt制作，支持内容编辑、主题切换、特效切换、下载、演讲者模式等功能。</p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>My Picture</h3>
+            <a href="#">代码私有</a>
+            <a target="_blink" href="https://laineyzhang.gitee.io/mypicture">线上预览</a>
+          </div>
+          <p>使用React技术栈，包括<span>react-create-app、styled-components、React-Router、Mobx、Antd、LeanCloud</span>等，实现一个在线图床，核心功能包括：登录、注册、图片上传、图片尺寸定制、上传历史展示等。
+          </p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>栅格系统的实现</h3>
+            <a target="_blink" href="https://github.com/Laineyzhang55/grid-system">代码链接</a>
+          </div>
+          <p>
+            实现原理：将页面分为12个块，结合媒体查询，根据不同的页面大小设置每个板块所占用的页面的大小实现自适应。
+          </p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>实现React</h3>
+            <a target="_blink" href="https://github.com/Laineyzhang55/Realize-React">代码链接</a>
+          </div>
+          <p>
+            基于<span>webpack</span>、<span>babel</span>等手动实现React的<span>虚拟DOM</span>、<span>模块化</span>、<span>class组件和函数组件</span>。
+          </p>
+        </div>
+      </section>
+      <section class="openSouce">
+        <h2>开源项目</h2>
+        <div class="item">
+          <div class="title">
+            <h3>markdown-html-loader</h3>
+            <a target="_blink" href="https://github.com/Laineyzhang55/Markdown-To-Html-loader">代码链接</a>
+          </div>
+          <p>
+            根据<code>showdown</code>编辑的一个将Markdown语法的文件转换成HTML可识别的文件。
+          </p>
+      </section>
+      <section class="education">
+        <h2>教育经历</h2>
+        <div class="item">
+          <div class="title">
+            <h3>重庆工商大学</h3> <span>2013-2017</span>
+          </div>
+        </div>
+      </section>
+      <section class="experience">
+        <h2>工作经历</h2>
+        <div class="item">
+          <div class="title">
+            <h3>美皇管理资讯（重庆）有限公司</h3> 
+            <span>2017.6-2020.1</span>
+            <span>招聘专员</span>
+          </div>
+          <p>美皇是隶属于全球排名第四的法国达飞轮船下的一个服务中心，主要业务设计全球的单证及海运操作。</p>
+          <p>工作职责：主要负责公司基础岗位的招聘工作。</p>
+        </div>
+      </section>
+    </main>
+  </article>
+</body>
+</html>
