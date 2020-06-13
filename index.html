@@ -67,7 +67,7 @@
     @media (max-width: 500px) {
       aside >.avatar{
         top: 30px;
-        left: 120px;
+        left: 110px;
       }
     }
     aside > .avatar img {
@@ -124,6 +124,17 @@
     .contact .item{
       display: flex;
       align-items: center;
+    }
+    .article ul{
+      padding: 0;
+      list-style-position: inside;
+    }
+    .article ul li{
+      margin-bottom: 5px;
+    }
+    .article a{
+      cursor: pointer;
+      color: #444;
     }
     @media (max-width: 500px){
       .contact{
@@ -210,9 +221,24 @@
           <span>学历</span>
           <span>本科</span>
         </div>
+      </section>
+      <section class="contact">
+        <h2>联系方式</h2>
         <div class="item">
-          <span>出生年月</span>
-          <span>1995.4</span>
+          <svg><use xlink:href="#icon-phone"></use></svg>
+          <a href=tel:18883168236>18883168236</a>
+        </div>
+        <div class="item">
+          <svg><use xlink:href="#icon-Email"></use></svg>
+          <a href=mailto:laieny_zhang47@163.com>laieny_zhang47@163.com</a>
+        </div>
+        <div class="item wechart">
+          <svg><use xlink:href="#icon-wechat"></use></svg>
+          <span>zsylm052</span>
+        </div>
+        <div class="item">
+          <svg><use xlink:href="#icon-city"></use></svg>
+          <span>杭州</span>
         </div>
       </section>
       <section class="skills">
@@ -237,36 +263,35 @@
           <span>Node JS</span>
           <span><i style="width: 70%"></i></span>
         </div>
+        <div class="item">
+          <span>AJAX</span>
+          <span><i style="width: 90%"></i></span>
+        </div>
       </section>
       <section class="skills-detail">
         <h2>技能</h2>
         <div class="item">
           <ul>
-            <li>熟练掌握静态页面制作技巧，能将设计稿完美还原</li>
+            <li>熟练掌握静态页面制作技巧，能将设计稿完美还原；</li>
+            <li>熟练使用HTML5的新标签，例如<span>header </span><span>footer </span><span>article </span><span>aside </span><span>main </span>等等；</li>
+            <li>熟练使用CSS3的新动画，例如<span>transform</span>、<span>translation</span>、<span>box-shadow </span>等，熟练使用<span>flex</span>、<span>gride </span>布局方式</li>
+            <li>熟悉<span>ES6</span>，包括<span>let</span>、<span>const</span>、<span>箭头函数</span>、<span>Promise</span>、<span>async/waite</span>等</li>
             <li>熟悉前后端分离技术，包括<span>AJAX</span>、<span>跨域</span>、<span>Cookie</span>、<span>Session</span>等</li>
-            <li>熟练掌握<span>React全家桶</span>，包括<span>create-react-app</span>、<span>ReactRouter</span>、<span>Mobx</span>等</li>
-            <li>熟悉<span>ES6</span>，包括let、const、Promise、async等</li>
-            <li>了解<span>webpack</span>的配置和优化</li>
+            <li>熟练使用<span>React全家桶</span>，包括<span>create-react-app</span>脚手架、<span>ReactRouter</span>、<span>React Hooks</span>、<span>Mobx</span>、<span>mobx-react</span>等</li>
+            <li>熟悉<span>webpack</span>的配置和常用loader和plugin，例如<span>css-loader</span>、<span>file-loader</span>、<span>html-webpack-plugin</span>等；</li>
           </ul>
         </div>
       </section>
-      <section class="contact">
-        <h2>联系方式</h2>
+      <section class="article">
+        <h2>我的文章</h2>
         <div class="item">
-          <svg><use xlink:href="#icon-phone"></use></svg>
-          <a href=tel:18883168236>18883168236</a>
-        </div>
-        <div class="item">
-          <svg><use xlink:href="#icon-Email"></use></svg>
-          <a href=mailto:laieny_zhang47@163.com>laieny_zhang47@163.com</a>
-        </div>
-        <div class="item wechart">
-          <svg><use xlink:href="#icon-wechat"></use></svg>
-          <span>zsylm052</span>
-        </div>
-        <div class="item">
-          <svg><use xlink:href="#icon-city"></use></svg>
-          <span>杭州</span>
+          <ul>
+            <li><a href="https://zhuanlan.zhihu.com/p/139124092">React Hooks原理</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/107289095">什么是JS原型链？</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/111282627">flex布局和gride布局</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/145831758">圣杯布局和双飞翼布局</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/103767586">九种方法帮你解决垂直水平居中</a></li>
+          </ul>
         </div>
       </section>
     </aside>
@@ -275,37 +300,35 @@
         <h2>项目经验</h2>
         <div class="item">
           <div class="title">
-            <h3>PiggyUI</h3>
-            <a href="#">代码私有</a>
-            <a target="_blink" href="http://laineyzhang.gitee.io/piggy-ui/src/index.html">线上预览</a>
-          </div>
-          <p>使用原生js实现的组件集合的页面，包括tab切换、tooltip提示、轮播组件、弹窗提示等功能组件。 </p>
-        </div>
-        <div class="item">
-          <div class="title">
-            <h3>三分钟PPT</h3>
-            <a href="#">代码私有</a>
-            <a target="_blink" href="http://laineyzhang.gitee.io/easy-ppt">线上预览</a>
-          </div>
-          <p> 使用原生<span>Javascript</span>实现一款简洁高效的在线ppt制作平台。使用该工具用户可使用markdown在数分钟完成ppt制作，支持内容编辑、主题切换、特效切换、下载、演讲者模式等功能。</p>
-        </div>
-        <div class="item">
-          <div class="title">
             <h3>My Picture</h3>
             <a href="#">代码私有</a>
             <a target="_blink" href="https://laineyzhang.gitee.io/mypicture">线上预览</a>
           </div>
-          <p>使用React技术栈，包括<span>react-create-app、styled-components、React-Router、Mobx、Antd、LeanCloud</span>等，实现一个在线图床，核心功能包括：登录、注册、图片上传、图片尺寸定制、上传历史展示等。
-          </p>
+          <p>My Picture是一款基于<span>LeanCloud</span>实现的一个在线图床网站，包括登录、注册、图片上传、图片尺寸定制、上传历史展示等功能</p>
+          <p><b>项目背景</b>：本项目是基于《三分钟PPT》项目对LeanCloud存储功能的使用进而开发。</p>
+          <p><b>技术栈</b>：使用React技术栈，使用<span>react-create-app</span>脚手架搭建项目框架；使用了<span>React Hooks
+          </span>；引入<span>styled-components</span>设置每个模块的样式，减少css文件的引入的使用，是代码的可复用性更高；通过<span>React-Router</span>的使用使得单页面实现多页面的效果，包括其中的<span>BrowserRouter\Link\NavLink\Route</span>等的使用；<span>Mobx</span>提供了全局数据管理，主要使用其中的observable观察变量, action设置操作方法;通过<span>mobx-react</span>的observer监控组件变化； 使用<span>Antd</span>的button和upload组件;LeanCloud作为服务器支持；使用<span>Promise</span>实现异步请求。</p>
         </div>
         <div class="item">
           <div class="title">
-            <h3>栅格系统的实现</h3>
-            <a target="_blink" href="https://github.com/Laineyzhang55/grid-system">代码链接</a>
+            <h3>三分钟PPT</h3>
+            <a target="_blink" href="https://github.com/Laineyzhang55/indroduce/blob/master/README.md">项目记录</a>
+            <a href="#">代码私有</a>
+            <a target="_blink" href="http://laineyzhang.gitee.io/easy-ppt">线上预览</a>
           </div>
-          <p>
-            实现原理：将页面分为12个块，结合媒体查询，根据不同的页面大小设置每个板块所占用的页面的大小实现自适应。
-          </p>
+          <p> 用原生<span>JS</span>实现一款简洁高效的在线ppt制作平台。使用该工具用户可使用markdown快速完成ppt制作，支持内容编辑、主题切换、特效切换、下载、演讲者模式等功能。</p>
+          <p><b>技术栈</b>：使用<span>正则</span>判断主次页;使用<span>class组件</span>的方式将页面的重要功能分成不同的独立的组件；使用<span>document.querySelector()</span>和<span>document.querySelectorAll()</span>选中需要监听的DOM元素；为了页面重新渲染后保留之前的主题设置使用<span>localStorage</span>保存数据；改变主题和设置打印时<span>document.createElement()</span>和<span>ParentNode.appendChild()</span>添加新的DOM节点；还使用到<span>字符串模板</span>控制图片上传的展示内容；对于虚拟DOM使用了<span>setAttribute()</span>添加属性和属性值。 </p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>PiggyUI</h3>
+            <a href="#">代码私有</a>
+            <a target="_blink" href="https://laineyzhang55.github.io/Piggy-UI/">项目记录</a>
+            <a target="_blink" href="http://laineyzhang.gitee.io/piggy-ui/src/index.html">线上预览</a>
+          </div>
+          <p>使用原生js实现的组件集合的页面，包括carousel、collaspe、dialog、message、tabs、tooltip等组件，提供了在线效果预览和代码查看功能。 </p>
+          <p><b>项目背景</b>：使用antd、Element UI等组件时发现许多组件用JS也可以实现，因此集合了一个原生JS组件页面。</p>
+          <p><b>技术栈</b>：dialog组件使用到<span>flex布局</span>，<span>定位</span>，<span>事件</span>，setTimeout和DOM的属性操作；Tooltip中除了上述技术还使用到BFC的<span>z-index</span>；carousel中使用到<span>box-shadow</span>设置阴影效果，结合<span>透明度</span>和<span>偏移</span>的控制实现各种切换效果，js中使用到<span>三元运算符</span>，<span>箭头函数</span>等；Collapse主要式通过<span>属性操作的增加、删除、切换</span>实现的折叠效果；message组件主要是运用了<span>Node.createElement</span>、<span>parentNode.removeChild</span>、<span>Node.createTextNode</span>，实现dom的渲染和移除；tabs核心是使用<span>Element.offsetWidth</span>读取当前对象的宽度，再为装饰线设置宽度，<span>Element.offsetLeft</span>得到当前目标的位置以实现装饰线的移动效果。</p>
         </div>
         <div class="item">
           <div class="title">
@@ -313,26 +336,39 @@
             <a target="_blink" href="https://github.com/Laineyzhang55/Realize-React">代码链接</a>
           </div>
           <p>
-            基于<span>webpack</span>、<span>babel</span>等手动实现React的<span>虚拟DOM</span>、<span>模块化</span>、<span>class组件和函数组件</span>。
+            基于Node.js、Webpack、Babel等手动实现React的虚拟DOM、模块化、class组件和函数组件。
           </p>
+          <p><b>项目背景</b>为了真正理解React框架的原理，而不仅仅只是知道怎么使用。</p>
+          <p><b>技术栈</b>：使用<span>基于Node.js</span>搭建Webpack环境，使用 <span>babel-loader</span>处理.jsx文件,<span>html-webpack-plugin</span>生成html文件，使用<span>wepack-dev-server</span>启动热更新；DOM的实现通过<span>if、typeof</span>判断tag的类型，添加对应的虚拟DOM和属性，添加到容器内；分离功能模块到不同的文件内，通过<span>export/export default</span>导出，通过<span>import..from..</span>引用；class组件中使用class的<span>extends</span>继承定义的基础组件的方法和属性。</p>
         </div>
       </section>
       <section class="openSouce">
         <h2>开源项目</h2>
         <div class="item">
           <div class="title">
-            <h3>markdown-html-loader</h3>
+            <h3>search-weather-cli</h3>
+            <a target="_blink" href="https://github.com/Laineyzhang55/search-weather-cli">代码链接</a>
+          </div>
+          <p>
+          基于<span>Node.js</span>开发的一款用于查询天气的命令行工具。
+          </p>
+          <p><b>项目说明</b>：首先基于Node.js开发了一个search-weather的package，用<span>module.exports</span>导出以供使用，使用npm的<span>npm publish</span>发布；本项目通过<span>const</span>和<span>require</span>引入；</p>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>Markdown-To-Html-loader</h3>
             <a target="_blink" href="https://github.com/Laineyzhang55/Markdown-To-Html-loader">代码链接</a>
           </div>
           <p>
             根据<code>showdown</code>编辑的一个将Markdown语法的文件转换成HTML可识别的文件。
           </p>
+        </div>
       </section>
       <section class="education">
         <h2>教育经历</h2>
         <div class="item">
           <div class="title">
-            <h3>重庆工商大学</h3> <span>2013-2017</span>
+            <h3>重庆工商大学</h3>  <span>2013-2017</span>
           </div>
         </div>
       </section>
