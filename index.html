@@ -13,6 +13,10 @@
       body{
         margin: 0;
       }
+      .page2 {
+        page-break-before: always;
+        margin-top: 30px;
+      }
     }
   #svg{
     display: none;
@@ -277,7 +281,7 @@
             <li>熟练使用CSS3的新动画，例如<span>transform</span>、<span>translation</span>、<span>box-shadow </span>等，熟练使用<span>flex</span>、<span>gride </span>布局方式</li>
             <li>熟悉<span>ES6</span>，包括<span>let</span>、<span>const</span>、<span>箭头函数</span>、<span>Promise</span>、<span>async/waite</span>等</li>
             <li>熟悉前后端分离技术，包括<span>AJAX</span>、<span>跨域</span>、<span>Cookie</span>、<span>Session</span>等</li>
-            <li>熟练使用<span>React全家桶</span>，包括<span>create-react-app</span>脚手架、<span>ReactRouter</span>、<span>React Hooks</span>、<span>Mobx</span>、<span>mobx-react</span>等</li>
+            <li class="page2">熟悉<span>React全家桶</span>，包括<span>create-react-app</span>脚手架、<span>ReactRouter</span>、<span>React Hooks</span>、<span>Mobx</span>、<span>mobx-react</span>等</li>
             <li>熟悉<span>webpack</span>的配置和常用loader和plugin，例如<span>css-loader</span>、<span>file-loader</span>、<span>html-webpack-plugin</span>等；</li>
           </ul>
         </div>
@@ -330,7 +334,7 @@
           <p><b>项目背景</b>：使用antd、Element UI等组件时发现许多组件用JS也可以实现，因此集合了一个原生JS组件页面。</p>
           <p><b>技术栈</b>：dialog组件使用到<span>flex布局</span>，<span>定位</span>，<span>事件</span>，setTimeout和DOM的属性操作；Tooltip中除了上述技术还使用到BFC的<span>z-index</span>；carousel中使用到<span>box-shadow</span>设置阴影效果，结合<span>透明度</span>和<span>偏移</span>的控制实现各种切换效果，js中使用到<span>三元运算符</span>，<span>箭头函数</span>等；Collapse主要式通过<span>属性操作的增加、删除、切换</span>实现的折叠效果；message组件主要是运用了<span>Node.createElement</span>、<span>parentNode.removeChild</span>、<span>Node.createTextNode</span>，实现dom的渲染和移除；tabs核心是使用<span>Element.offsetWidth</span>读取当前对象的宽度，再为装饰线设置宽度，<span>Element.offsetLeft</span>得到当前目标的位置以实现装饰线的移动效果。</p>
         </div>
-        <div class="item">
+        <div class="item page2" >
           <div class="title">
             <h3>实现React</h3>
             <a target="_blink" href="https://github.com/Laineyzhang55/Realize-React">代码链接</a>
@@ -377,11 +381,8 @@
         <div class="item">
           <div class="title">
             <h3>美皇管理资讯（重庆）有限公司</h3> 
-            <span>2017.6-2020.1</span>
-            <span>招聘专员</span>
           </div>
-          <p>美皇是隶属于全球排名第四的法国达飞轮船下的一个服务中心，主要业务设计全球的单证及海运操作。</p>
-          <p>工作职责：主要负责公司基础岗位的招聘工作。</p>
+          <p>美皇是隶属于全球排名第四的CMA CGM的全球服务中心，集中处理单证及海运操作。</p>
         </div>
       </section>
     </main>
